@@ -20,7 +20,7 @@ import ReactDOM from "react-dom/client";
 // import Example6 from "./task5/Example6";
 // import ParentCounter from "./props/ParenCounter";
 // import ParentTask from "./props/propTask/ParentTask";
-// import RegistrationForm from "./formREG/FormRegistation";
+import RegistrationForm from "./formREG/FormRegistation";
 // import ParentUI from "./passDataChildToParentUsingProps/ParentUI";
 // import ParentInput from "./passDataChildToParentUsingProps/2ndEx/parent2ndEx";
 // import RegisterForm from "./passDataChildToParentUsingProps/TaskRegisterData/parent5";
@@ -34,7 +34,7 @@ import ReactDOM from "react-dom/client";
 // import ProductList3 from "./useEffect/fetchDataLoading/loader";
 // import ArrayMap from "./useEffect/map/map";
 // import UseEffectExample1 from "./useEffect/practiceUseEffect/UseEffectExample1";
-import Pract from "./useEffect/practiceUseEffect/pract";
+// import Pract from "./useEffect/practiceUseEffect/pract";
 // import ProductListWithFilters from "./day22/productSearch";
 // import ProductListWithFilters1 from "./day22/productSearch1";
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -58,7 +58,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Example6 /> */}
     {/* <ParentCounter /> */}
     {/* <ParentTask /> */}
-    {/* <RegistrationForm /> */}
+    <RegistrationForm />
     {/* <ParentUI /> */}
     {/* <ParentInput /> */}
     {/* <RegisterForm /> */}
@@ -72,7 +72,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <ProductList3 /> */}
     {/* <ArrayMap /> */}
     {/* <UseEffectExample1 /> */}
-    <Pract />
+    {/* <Pract /> */}
     {/* <ProductListWithFilters /> */}
     {/* <ProductListWithFilters1 /> */}
   </>
