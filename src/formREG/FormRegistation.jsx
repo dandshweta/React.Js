@@ -9,7 +9,6 @@ function RegistrationForm() {
     password: "",
     phoneNumber: "",
     dateOfBirth: "",
-    // gender: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -50,10 +49,6 @@ function RegistrationForm() {
       newErrors.dateOfBirth = "Date of Birth is required";
     }
 
-    // if (!formData.gender) {
-    //   newErrors.gender = "Gender is required";
-    // }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -70,13 +65,8 @@ function RegistrationForm() {
     e.preventDefault();
 
     if (validateForm()) {
-      // Form is valid, you can proceed with submission
       console.log("Form Data:", formData);
-    }
-    if (validateForm()) {
-      // Form is valid, you can proceed with submission
-      console.log("Form Data:", formData);
-      setIsSubmitted(true); // Set the submission status to true
+      setIsSubmitted(true);
     }
   };
   const handleReset = () => {
@@ -95,7 +85,7 @@ function RegistrationForm() {
     <div className="main-container">
       <div className="registration-form-container">
         <h2>Registration Form</h2>
-        {isSubmitted ? ( // Render success message if isSubmitted is true
+        {isSubmitted ? (
           <div>
             <p> You have successfully registered! Please login.</p>
             {/* <button onClick={handleReset}>Submit Another Form</button> */}
@@ -178,44 +168,6 @@ function RegistrationForm() {
               )}
             </div>
 
-            {/* <div className="form-group">
-            <div className="gender-options">
-              <label>Gender:</label>
-              <div>
-                <label>
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="male"
-                    checked={formData.gender === "male"}
-                    onChange={handleInputChange}
-                  />
-                  Male
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="female"
-                    checked={formData.gender === "female"}
-                    onChange={handleInputChange}
-                  />
-                  Female
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="other"
-                    checked={formData.gender === "other"}
-                    onChange={handleInputChange}
-                  />
-                  Other
-                </label>
-              </div>
-            </div>
-            {errors.gender && <p className="error">{errors.gender}</p>}
-          </div> */}
             <div className="btn-container">
               <button type="submit">Submit</button>
               <button type="reset" onClick={handleReset}>

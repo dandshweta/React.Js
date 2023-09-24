@@ -20,7 +20,7 @@ import ReactDOM from "react-dom/client";
 // import Example6 from "./task5/Example6";
 // import ParentCounter from "./props/ParenCounter";
 // import ParentTask from "./props/propTask/ParentTask";
-import RegistrationForm from "./formREG/FormRegistation";
+// import RegistrationForm from "./formREG/FormRegistation";
 // import ParentUI from "./passDataChildToParentUsingProps/ParentUI";
 // import ParentInput from "./passDataChildToParentUsingProps/2ndEx/parent2ndEx";
 // import RegisterForm from "./passDataChildToParentUsingProps/TaskRegisterData/parent5";
@@ -37,6 +37,8 @@ import RegistrationForm from "./formREG/FormRegistation";
 // import Pract from "./useEffect/practiceUseEffect/pract";
 // import ProductListWithFilters from "./day22/productSearch";
 // import ProductListWithFilters1 from "./day22/productSearch1";
+import ProductListWithFilters4 from "./day22/product";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     {/* <App /> */}
@@ -58,7 +60,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Example6 /> */}
     {/* <ParentCounter /> */}
     {/* <ParentTask /> */}
-    <RegistrationForm />
+    {/* <RegistrationForm /> */}
     {/* <ParentUI /> */}
     {/* <ParentInput /> */}
     {/* <RegisterForm /> */}
@@ -75,5 +77,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Pract /> */}
     {/* <ProductListWithFilters /> */}
     {/* <ProductListWithFilters1 /> */}
+    <ProductListWithFilters4 />
   </>
 );
