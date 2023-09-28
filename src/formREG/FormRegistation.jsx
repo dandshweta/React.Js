@@ -84,7 +84,6 @@ function RegistrationForm() {
   return (
     <div className="main-container">
       <div className="registration-form-container">
-        <h2>Registration Form</h2>
         {isSubmitted ? (
           <div>
             <p> You have successfully registered! Please login.</p>
@@ -96,6 +95,7 @@ function RegistrationForm() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="registration-form">
+            <h2>Registration Form</h2>
             <div className="form-group">
               <label htmlFor="firstName">First Name:</label>
               <input
@@ -137,6 +137,16 @@ function RegistrationForm() {
                 id="password"
                 name="password"
                 value={formData.password}
+                onChange={handleInputChange}
+              />
+              {errors.password && <p className="error">{errors.password}</p>}
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Confirm Password:</label>
+              <input
+                type="password"
+                name="password1"
+                value={formData.password1}
                 onChange={handleInputChange}
               />
               {errors.password && <p className="error">{errors.password}</p>}

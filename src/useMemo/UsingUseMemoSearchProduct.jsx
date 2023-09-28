@@ -1,48 +1,56 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { RiseLoader } from "react-spinners";
-import "./ProductStyle.css";
 
-const ProductListWithFilters4 = () => {
+const ProductListWithFiltersWithUseMemo = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
   const [search, setSearch] = useState("");
-  const [cart, setCart] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((data) => data.json())
       .then((data) => {
+        //console.log(data);
+        // Success
         setIsLoading(false);
         setProducts(data);
-        setFilteredProducts(data);
       })
       .catch((err) => {
         console.log(err);
+        // Error
         setIsLoading(false);
       });
   }, []);
 
-  useEffect(() => {
+  //console.log("Re-Render: ", isLoading, products);
+
+  /*   useEffect(() => {
     const filteredList = products.filter((item) => {
+      // item.title.toLowerCase().search(search.toLowerCase())
+
       const searchLc = search.toLowerCase();
       const currentWordLC = item.title.toLowerCase();
-      return currentWordLC.includes(searchLc);
+
+      return currentWordLC.search(searchLc) !== -1;
     });
 
     setFilteredProducts(filteredList);
+  }, [search, products]); */
+
+  const filteredProducts = useMemo(() => {
+    const filteredList = products.filter((item) => {
+      // item.title.toLowerCase().search(search.toLowerCase())
+
+      const searchLc = search.toLowerCase();
+      const currentWordLC = item.title.toLowerCase();
+
+      return currentWordLC.search(searchLc) !== -1;
+    });
+
+    return filteredList;
   }, [search, products]);
 
-  const handleSearchInputChange = (e) => {
-    setSearch(e.target.value);
-  };
-
-  const addToCart = (item) => {
-    setCart([...cart, item]);
-    setTotalPrice(totalPrice + item.price);
-  };
+  console.log("Re-Render: ", search, products, filteredProducts);
 
   return (
     <div>
@@ -58,25 +66,9 @@ const ProductListWithFilters4 = () => {
           type="search"
           placeholder="Search your product"
           value={search}
-          onChange={handleSearchInputChange}
+          onChange={(e) => setSearch(e.target.value)}
         />
-        <button onClick={() => setShowCart(!showCart)}>
-          My Cart ({cart.length})
-        </button>
       </div>
-      {showCart && (
-        <div>
-          <h2>My Cart</h2>
-          {cart.map((item) => (
-            <div key={item.id}>
-              <img width={70} height={70} src={item.image} alt={item.title} />
-              <p style={{ fontSize: 11 }}>{item.title}</p>
-              <p>${item.price}</p>
-            </div>
-          ))}
-          <p>Total Price: ${totalPrice.toFixed(2)}</p>
-        </div>
-      )}
       <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
         {isLoading ? (
           <RiseLoader color="red" />
@@ -84,10 +76,8 @@ const ProductListWithFilters4 = () => {
           filteredProducts.map((item) => {
             return (
               <div style={{ width: 140 }} key={item.id}>
-                <img width={70} height={70} src={item.image} alt={item.title} />
+                <img width={70} height={70} src={item.image} />
                 <p style={{ fontSize: 11 }}>{item.title}</p>
-                <p>${item.price}</p>
-                <button onClick={() => addToCart(item)}>Add to Cart</button>
               </div>
             );
           })
@@ -97,4 +87,4 @@ const ProductListWithFilters4 = () => {
   );
 };
 
-export default ProductListWithFilters4;
+export default ProductListWithFiltersWithUseMemo;

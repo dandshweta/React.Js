@@ -37,7 +37,17 @@ import ReactDOM from "react-dom/client";
 // import Pract from "./useEffect/practiceUseEffect/pract";
 // import ProductListWithFilters from "./day22/productSearch";
 // import ProductListWithFilters1 from "./day22/productSearch1";
-import ProductListWithFilters4 from "./day22/product";
+// import ProductListWithFilters4 from "./day22/product";
+// import Loader from "./Spinner/LoaderSpinner";
+// import ParentDay15 from "./UseEffectCleanUpFunction/ParentDay15";
+// import UseMemoParentDay15B from "./UseEffectCleanUpFunction/UseMemo/ParentMemo";
+// import TimerComp from "./UseEffectCleanUpFunction/UseMemo/TaskTimerSet/TimerComp";
+// import ProductListWithFiltersWithUseMemo from "./useMemo/UsingUseMemoSearchProduct";
+// import ReactMemo from "./useMemo/memo_useMemo_UseCallback/ReactMemo";
+import ExwithMemo from "./useMemo/memo_useMemo_UseCallback/withMemo";
+// import WithoutMemo from "./useMemo/memo_useMemo_UseCallback/withoutMemo";
+// import StopWatch from "./useMemo/StopWatch/Stopwatch1";
+import StopWatch from "./useMemo/StopWatch/Stopwatch";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -77,6 +87,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Pract /> */}
     {/* <ProductListWithFilters /> */}
     {/* <ProductListWithFilters1 /> */}
-    <ProductListWithFilters4 />
+    {/* <ProductListWithFilters4 /> */}
+    {/* <Loader /> */}
+    {/* <ParentDay15 /> */}
+    {/* <UseMemoParentDay15B /> */}
+    {/* <TimerComp /> */}
+    {/* <ProductListWithFiltersWithUseMemo /> */}
+    {/* <ReactMemo /> */}
+    <ExwithMemo />
+    {/* <WithoutMemo /> */}
+    {/* <StopWatch /> */}
+    <StopWatch />
   </>
 );
