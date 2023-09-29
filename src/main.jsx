@@ -44,11 +44,12 @@ import ReactDOM from "react-dom/client";
 // import TimerComp from "./UseEffectCleanUpFunction/UseMemo/TaskTimerSet/TimerComp";
 // import ProductListWithFiltersWithUseMemo from "./useMemo/UsingUseMemoSearchProduct";
 // import ReactMemo from "./useMemo/memo_useMemo_UseCallback/ReactMemo";
-import ExwithMemo from "./useMemo/memo_useMemo_UseCallback/withMemo";
+// import ExwithMemo from "./useMemo/memo_useMemo_UseCallback/withMemo";
 // import WithoutMemo from "./useMemo/memo_useMemo_UseCallback/withoutMemo";
 // import StopWatch from "./useMemo/StopWatch/Stopwatch1";
-import StopWatch from "./useMemo/StopWatch/Stopwatch";
-
+// import StopWatch from "./useMemo/StopWatch/Stopwatch";
+// import CodeFlowV1 from "./useMemo/CreateSyncronousAndAvoidRr-renders/UseMemoAvoidRerenders";
+import ParentUseCallbackV2 from "./useCallback/parentUseCallback";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     {/* <App /> */}
@@ -94,9 +95,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <TimerComp /> */}
     {/* <ProductListWithFiltersWithUseMemo /> */}
     {/* <ReactMemo /> */}
-    <ExwithMemo />
+    {/* <ExwithMemo /> */}
     {/* <WithoutMemo /> */}
     {/* <StopWatch /> */}
-    <StopWatch />
+    {/* <StopWatch /> */}
+    {/* <CodeFlowV1 /> */}
+    <ParentUseCallbackV2 />
   </>
 );
