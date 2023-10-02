@@ -49,7 +49,9 @@ import ReactDOM from "react-dom/client";
 // import StopWatch from "./useMemo/StopWatch/Stopwatch1";
 // import StopWatch from "./useMemo/StopWatch/Stopwatch";
 // import CodeFlowV1 from "./useMemo/CreateSyncronousAndAvoidRr-renders/UseMemoAvoidRerenders";
-import ParentUseCallbackV2 from "./useCallback/parentUseCallback";
+// import ParentUseCallbackV2 from "./useCallback/parentUseCallback";
+import WithoutUseMemoExample from "./day-02-10/usingUseMemo";
+import Parentprop from "./san-task-childParent/parent";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     {/* <App /> */}
@@ -100,6 +102,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <StopWatch /> */}
     {/* <StopWatch /> */}
     {/* <CodeFlowV1 /> */}
-    <ParentUseCallbackV2 />
+    {/* <ParentUseCallbackV2 /> */}
+    <WithoutUseMemoExample />
+    <Parentprop />
   </>
 );
