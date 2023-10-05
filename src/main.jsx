@@ -1,5 +1,6 @@
 // import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import App from './App.jsx'
 // import './index.css'
 // import UseState from "./useState/UseState";
@@ -50,8 +51,41 @@ import ReactDOM from "react-dom/client";
 // import StopWatch from "./useMemo/StopWatch/Stopwatch";
 // import CodeFlowV1 from "./useMemo/CreateSyncronousAndAvoidRr-renders/UseMemoAvoidRerenders";
 // import ParentUseCallbackV2 from "./useCallback/parentUseCallback";
-import WithoutUseMemoExample from "./day-02-10/usingUseMemo";
-import Parentprop from "./san-task-childParent/parent";
+// import WithoutUseMemoExample from "./day-02-10/usingUseMemo";
+// import Parentprop from "./san-task-childParent/parent";
+// import Counter from "./useMemoPractice/withuseMemo";
+// import Counter from "./useMemoPractice/withoutUseMemo";
+// import ProductList1 from "./day-04-10/fetch";
+// import ProductDetails from "./day-04-10/useParams/productDetails";
+import ProductList from "./day-04-10/useParams/productList";
+// import ProductShow from "./day-04-10/task/productTask";
+
+const router = createBrowserRouter([
+  // {
+  //   path: "/products",
+  //   element: <ProductList1 />,
+  // },
+  // {
+  //   path: "/",
+  //   element: <ProductDetails />,
+  // },
+  // {
+  //   path: "/product-details/:productId",
+  //   element: <ProductDetails />,
+  // },
+  {
+    path: "/products",
+    element: <ProductList />,
+  },
+  {
+    path: "/",
+    element: <ProductList />,
+  },
+  // {
+  //   path: "/products/${product.id}",
+  //   element: <ProductShow />,
+  // },
+]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     {/* <App /> */}
@@ -103,7 +137,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <StopWatch /> */}
     {/* <CodeFlowV1 /> */}
     {/* <ParentUseCallbackV2 /> */}
-    <WithoutUseMemoExample />
-    <Parentprop />
+    {/* <WithoutUseMemoExample /> */}
+    {/* <Parentprop /> */}
+    {/* <Counter/> */}
+    {/* <Counter /> */}
+    {/* <ProductList1 /> */}
+    {/* <ProductDetails /> */}
+    {/* <ProductList /> */}
+    {/* <ProductDetails /> */}
+    {/* <ProductShow /> */}
+    <RouterProvider router={router} />
   </>
 );
