@@ -57,8 +57,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import Counter from "./useMemoPractice/withoutUseMemo";
 // import ProductList1 from "./day-04-10/fetch";
 // import ProductDetails from "./day-04-10/useParams/productDetails";
-import ProductList from "./day-04-10/useParams/productList";
+// import ProductList from "./day-04-10/useParams/productList";
 // import ProductShow from "./day-04-10/task/productTask";
+// import DynamicForm from "./task10-10-react/addField";
+// import FetchData from "./day13-10-asyncAwaitFetchData/example";
+import ProductsShow from "./day12-10-task-setTimingOpenWebsite/setTime";
 
 const router = createBrowserRouter([
   // {
@@ -73,18 +76,24 @@ const router = createBrowserRouter([
   //   path: "/product-details/:productId",
   //   element: <ProductDetails />,
   // },
-  {
-    path: "/products",
-    element: <ProductList />,
-  },
-  {
-    path: "/",
-    element: <ProductList />,
-  },
+  // {
+  //   path: "/products",
+  //   element: <ProductList />,
+  // },
+  // {
+  //   path: "/",
+  //   element: <ProductList />,
+  // },
   // {
   //   path: "/products/${product.id}",
   //   element: <ProductShow />,
   // },
+  {
+    path: "/",
+    // element: <DynamicForm />,
+    // element: <FetchData />,
+    element: <ProductsShow />,
+  },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
